@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FileSystemDialog</class>
+ <widget class="QDialog" name="FileSystemDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>673</width>
+    <height>442</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#widget_title
+{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: qlineargradient(x1: 0.5, y1: 0, x2: 0.5, y2: 1, stop: 0 #59574E, stop: 1 #3F3E3A);
+}
+
+#pushButton_close
+{
+	border: 0px;
+	border-radius: 10px;
+	height: 20px;
+	width: 20px;
+	background-color: qlineargradient(x1: 0.5, y1: 0, x2: 0.5, y2: 1, stop: 0 #EA9174, stop: 1 #DE4F1D);
+}
+#pushButton_close:hover
+{
+	background-color: qlineargradient(x1: 0.5, y1: 0, x2: 0.5, y2: 1, stop: 0 #EFA893, stop: 1 #E15321);
+}
+#pushButton_close:pressed
+{
+	background-color: #E86C42;
+}
+
+#label_title
+{
+	color: #DFDAD1;
+	font: 750 10pt;
+}
+
+/**/
+#widget_setting QPushButton
+{
+	border: 1px solid #565550;
+	border-radius: 3px;
+	color: #DFDAD1;
+	background-color: qlineargradient(x1: 0.5, y1: 0, x2: 0.5, y2: 1, stop: 0 #3D3C38, stop: 1 #525049);
+	padding: 6px;
+}
+#widget_setting QPushButton:hover
+{
+	background-color: qlineargradient(x1: 0.5, y1: 0, x2: 0.5, y2: 1, stop: 0 #484741, stop: 1 #43423D);
+}
+#widget_setting QPushButton:pressed
+{
+	background-color: #3A3A36;
+}
+#widget_setting QPushButton:disabled
+{
+	color: #948F8A;
+	background-color: #3C3B37;
+}
+
+/**/
+QTableView
+{
+	outline: none;
+}
+QTableView::item
+{
+	color: #000000;
+	background-color: #FFFFFF;
+}
+QTableView::item:selected
+{
+	color: #FFFFFF;
+	background-color: #EF7645;
+}
+
+/**/
+QHeaderView::section
+{
+	border: 1px solid #E2E0DE;
+	border-left: 0px;
+	border-top: 0px;
+	height: 20px;
+	padding: 4px;
+	background-color: #FDFDFC;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>8</number>
+   </property>
+   <property name="topMargin">
+    <number>8</number>
+   </property>
+   <property name="rightMargin">
+    <number>8</number>
+   </property>
+   <property name="bottomMargin">
+    <number>8</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widget_title" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>32</height>
+      </size>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_title">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>文件管理</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_close">
+        <property name="text">
+         <string>X</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="FilePathWidget" name="widget_path" native="true"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="widget_setting" native="true">
+       <property name="styleSheet">
+        <string notr="true">#widget_setting
+{
+	background-color: #E7E5E4;
+}</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="styleSheet">
+           <string notr="true">font: 750 10pt;</string>
+          </property>
+          <property name="text">
+           <string>操作</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string>新建文件夹</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableView" name="tableView">
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <property name="showGrid">
+        <bool>false</bool>
+       </property>
+       <property name="sortingEnabled">
+        <bool>true</bool>
+       </property>
+       <attribute name="horizontalHeaderHighlightSections">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>FilePathWidget</class>
+   <extends>QWidget</extends>
+   <header>FileSystemDialog/FilePathWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
